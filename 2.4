@@ -1,0 +1,17 @@
+#num4
+
+a = input("ввод")
+b = input("ввод")
+color = ("желтый", "снинй", "красный")
+if a in color and b in color:
+    if a != b:
+        if a in  ("снинй", "красный") and b in  ("снинй", "красный"):
+            print("фиолетовый")
+        if a in  ("желтый", "красный") and b in  ("желтый", "красный"):
+            print("оранжевый")
+        if a in ("желтый", "синий") and b in ("желтый", "синий"):
+            print("зеленый")
+    else:
+        print(a)
+else:
+    print("ошибка")
