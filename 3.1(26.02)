@@ -1,0 +1,7 @@
+stroke = ""
+while True:
+    word = input("Введите слово: ")
+    if word == "stop":
+        break
+    stroke += word  + " "
+print(stroke)
