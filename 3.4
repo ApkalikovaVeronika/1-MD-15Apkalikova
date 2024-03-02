@@ -1,0 +1,20 @@
+import random
+
+prav = 0
+neprav = 0
+
+while neprav < 3:
+    a = random.randint(10, 20)
+    b = random.randint(1, 10)
+    res = a + b
+    print(a, "+" , b)
+    otvet= input("ответ: ")
+    res = otvet
+    if otvet == res:
+        print("Правильно!")
+        prav += 1
+    else:
+        print("Ответ неверный")
+        neprav += 1
+
+print("Игра окончена. Правильных ответов:", prav)
