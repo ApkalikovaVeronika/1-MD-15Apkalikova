@@ -1,0 +1,14 @@
+day=int(input("введите день:"))
+month=int(input("введите месяц:"))
+god=int(input("введите год: "))
+def magic(day,month,god):
+    a=day * month
+    b=god % 100
+    if a == b:
+        otvet = True
+    else:
+        otvet = False
+    return otvet
+
+result = magic(day,month,god)
+print(result)
