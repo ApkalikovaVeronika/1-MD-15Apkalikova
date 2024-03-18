@@ -1,0 +1,13 @@
+
+def delenie():
+    try:
+        chislo = float(input("введите число: "))
+        res= 100/chislo
+        print (res)
+    except ValueError:
+        print ("ошибка!Введенa строка")
+    except  ZeroDivisionError:
+        chislo=0
+        print ("ошибка!Деление на 0!")
+print()
+delenie()
