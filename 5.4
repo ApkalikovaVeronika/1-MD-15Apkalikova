@@ -1,0 +1,13 @@
+days = ("понедельник" , "вторник" , "среда" , "четверг" , "пятница" , "суббота" , "воскресенье")
+weekends = int(input("Введите кол-во выходных:"))
+week_days = []
+for i in range(weekends):
+    week_days.append(days[-i - 1])
+
+workdays = list(days) #список рабочих дней
+
+for day in week_days:
+    workdays.remove(day)
+
+print('выходные дни: ',week_days)
+print('рабочие дни: ',workdays)
