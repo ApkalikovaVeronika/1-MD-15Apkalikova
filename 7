@@ -1,0 +1,23 @@
+def task1() :
+    from PIL import Image
+    image = Image.open('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля.jpeg')
+    image.show()
+    print(f"Имя файла:{image.filename}")
+    print(f"Формат: {image.format}")
+    print(f"Ширина: {image.width}")
+    print(f"Высота: {image.height}")
+    print(f"Цветовая модель: {image.mode}")
+task1()
+
+def task2(in_path, out_path) :
+    i = Image.open('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля.jpeg')
+    image.show()
+    small_img = i.resize((image.width // 3, i.height // 3))
+    small_img.save('small_like.jpeg')
+
+    horizont = i.transpose(i.FLIP_LEFT_RIGHT)
+    horizont.save('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля2.jpeg')
+
+    vertical = i.transpose(i.FLIP_TOP_BOTTOM)
+    vertical.save('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля22.jpeg')
+task2('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля2.jpeg', 'Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля22.jpeg')
