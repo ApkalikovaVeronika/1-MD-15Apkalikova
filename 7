@@ -7,17 +7,45 @@ def task1() :
     print(f"Ширина: {image.width}")
     print(f"Высота: {image.height}")
     print(f"Цветовая модель: {image.mode}")
-task1()
-
+#task1()
+#Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля.jpeg
 def task2(in_path, out_path) :
-    i = Image.open('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля.jpeg')
-    image.show()
-    small_img = i.resize((image.width // 3, i.height // 3))
-    small_img.save('small_like.jpeg')
+    i = Image.open(in_path)
+    i.show()
+    w, h = i.resize
+    new_w = w // 3
+    new_h = h // 3
+    small_img = i.resize(new_w , new_h )
+    small_img.save(out_path)
+    small_img.show()
+    horizont = i.transpose(Image.FLIP_LEFT_RIGHT)
+    horizont.show()
+    vertical = i.transpose(Image.FLIP_TOP_BOTTOM)
+    vertical.show()
+#task2('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля2.jpeg', 'Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля22.jpeg')
 
-    horizont = i.transpose(i.FLIP_LEFT_RIGHT)
-    horizont.save('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля2.jpeg')
+def task3(a) :
+    for i in a :
+        a = image.open(i)
+        a.show()
+        filtrr_im = im.filter(ImageFilter.BLUR)
+        filtrr_im.save(f'Z:\\1-МД-15\\Апкаликова Вероника\\image\\{i+"00.jpeg"}')
+f(['Z:\\1-МД-15\\Апкаликова Вероника\\image\\1.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\2.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\3.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\4.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\5.jpeg'])
+task3()
 
-    vertical = i.transpose(i.FLIP_TOP_BOTTOM)
-    vertical.save('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля22.jpeg')
-task2('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля2.jpeg', 'Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\15апреля22.jpeg')
+def task4(photo) :
+    for i in photo :
+        photo = image.open(i)
+        photo.show()
+        filtrr_im = im.filter(ImageFilter.BLUR)
+        filtrr_im.save(f'Z:\\1-МД-15\\Апкаликова Вероника\\image\\{i+"00.jpeg"}')
+    f(['Z:\\1-МД-15\\Апкаликова Вероника\\image\\1.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\2.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\3.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\4.jpeg',
+       'Z:\\1-МД-15\\Апкаликова Вероника\\image\\5.jpeg'])
+#task4()
