@@ -1,0 +1,26 @@
+def task1(image):
+    for i in image:
+        image = Image.open('Z:\\1-МД-15\\Апкаликова Вероника\\алгоритмизация\\a.jpeg')
+        image.show()
+        filtrr_im = image.filter(ImageFilter.BLUR)
+        filtrr_im.save(f'Z:\\1-МД-15\\Апкаликова Вероника\\image\\{i+"image.jpeg"}')
+#task1(['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg'])
+
+def task2():
+    import csv
+
+    itog = 0
+
+    with open('oao.csv', 'r') as file:
+        reader = csv.reader(file)
+        next(reader)
+
+        print('нужно купить: ')
+        for row in reader:
+            product = row[0]
+            kolvo = int([1])
+            price = int([2])
+            conechn += kolvo * price
+            print(f'{product} - {kolvo} шт. за {price} руб.')
+        print(f'Итоговая сумма: {conechn} руб.')
+task2()
