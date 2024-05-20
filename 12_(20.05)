@@ -16,11 +16,12 @@ def task_1():
             print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
     newRestaurant = Restaurant("Галата", "турецкая", 5)
 
-#########
+#IceCreamStand
     class IceCreamStand(Restaurant):
-        def __init__(self, stand_name, flavor):
+        def __init__(self, stand_name, flavor, location):
             self.stand_name = stand_name
             self.flavor = flavor
+            self.location = location
 
         def describe_restaurant(self):
             print(f"Стенд мороженого {self.stand_name}.")
@@ -30,10 +31,49 @@ def task_1():
             for flavor in self.flavor:
                 print("-" + flavor)
 
-    ice_cream_stand = IceCreamStand("33 пингвина", ["Ванильное", "Шоколадное","Клубничное"])
+        def location_restaurant(self):
+            print(f"Находится в {self.location}.")
 
+
+        def addflavor(self, newflavor):
+            if newflavor not in self.flavor:
+                self.flavor.append(newflavor)
+                print(f"{newflavor} добавлен")
+            else:
+                print(f"{newflavor} имеется")
+
+        def rem(self,flavor):
+            if flavor in self.flavor:
+                self.flavor.remove(flavor)
+                print(f"{flavor} вкус удален")
+            else:
+                print(f"{flavor} отсутствует в списке")
+
+        def nalichie(self,flavor):
+            if flavor in self.flavor:
+                print(f"{flavor} в наличии")
+            else:
+                print(f"{flavor} нет в наличии")
+
+        def typeice(self):
+            print("мороженное на палочке")
+        def typeice2(self):
+            print("мягкое мороженное")
+
+        def ff(self):
+            print("Доступные виды мороженного: ")
+            for flavor in self.flavor:
+                print(flavor)
+
+
+
+    ice_cream_stand = IceCreamStand("Кафе мороженое", ["Ванильное", "Шоколадное","Клубничное"], "Санкт-Петербугрге")
+#сорта
 
     ice_cream_stand.describe_restaurant()
     ice_cream_stand.display_flavors()
-
+    ice_cream_stand.location_restaurant()
+    ice_cream_stand.add_ice_cream()
+    ice_cream_stand.remove_ice_cream()
 task_1()
+
