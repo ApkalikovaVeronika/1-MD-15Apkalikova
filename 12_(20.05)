@@ -1,0 +1,39 @@
+def task_1():
+    class Restaurant:
+        def __init__(self, restaurant_name, cuisine_type, rating = 0):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+            self.rating = rating
+
+        def describe_restaurant(self):
+            print(f"Ресторан {self.restaurant_name} основывается на кухне: {self.cuisine_type} . Рейтинг: {self.rating}")
+
+        def open_restaurant(self):
+            print(f"Ресторан {self.restaurant_name} открыт!")
+
+        def rating(self, new_rating):
+            self.rating = new_rating
+            print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
+    newRestaurant = Restaurant("Галата", "турецкая", 5)
+
+#########
+    class IceCreamStand(Restaurant):
+        def __init__(self, stand_name, flavor):
+            self.stand_name = stand_name
+            self.flavor = flavor
+
+        def describe_restaurant(self):
+            print(f"Стенд мороженого {self.stand_name}.")
+
+        def display_flavors(self):
+            print("Доступные вкусы мороженого: ")
+            for flavor in self.flavor:
+                print("-" + flavor)
+
+    ice_cream_stand = IceCreamStand("33 пингвина", ["Ванильное", "Шоколадное","Клубничное"])
+
+
+    ice_cream_stand.describe_restaurant()
+    ice_cream_stand.display_flavors()
+
+task_1()
