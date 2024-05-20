@@ -18,13 +18,14 @@ def task_1():
 
 #IceCreamStand
     class IceCreamStand(Restaurant):
-        def __init__(self, stand_name, flavor, location):
+        def __init__(self, stand_name, flavor, location, time):
             self.stand_name = stand_name
             self.flavor = flavor
             self.location = location
+            self.time = time
 
         def describe_restaurant(self):
-            print(f"Стенд мороженого {self.stand_name}.")
+            print(f"Кафе мороженого {self.stand_name}.")
 
         def display_flavors(self):
             print("Доступные вкусы мороженого: ")
@@ -34,46 +35,52 @@ def task_1():
         def location_restaurant(self):
             print(f"Находится в {self.location}.")
 
+        def time_cafe(self):
+            print(f"График работы {self.time}.")
 
-        def addflavor(self, newflavor):
+
+        def add_flavor(self, newflavor):
             if newflavor not in self.flavor:
                 self.flavor.append(newflavor)
                 print(f"{newflavor} добавлен")
             else:
                 print(f"{newflavor} имеется")
 
-        def rem(self,flavor):
+        def remove_flavor(self,flavor):
             if flavor in self.flavor:
                 self.flavor.remove(flavor)
                 print(f"{flavor} вкус удален")
             else:
                 print(f"{flavor} отсутствует в списке")
 
-        def nalichie(self,flavor):
+        def in_cafe(self,flavor):
             if flavor in self.flavor:
                 print(f"{flavor} в наличии")
             else:
                 print(f"{flavor} нет в наличии")
 
-        def typeice(self):
+        def ice_flavor(self):
             print("мороженное на палочке")
-        def typeice2(self):
+        def ice2_flavor(self):
             print("мягкое мороженное")
 
-        def ff(self):
+        def sort_ice(self):
             print("Доступные виды мороженного: ")
             for flavor in self.flavor:
                 print(flavor)
 
 
 
-    ice_cream_stand = IceCreamStand("Кафе мороженое", ["Ванильное", "Шоколадное","Клубничное"], "Санкт-Петербугрге")
-#сорта
+    ice_cream_stand = IceCreamStand("Кафе мороженое", ["Ванильное", "Шоколадное","Клубничное"], "Санкт-Петербугрге", "8:00-18:00")
 
     ice_cream_stand.describe_restaurant()
     ice_cream_stand.display_flavors()
     ice_cream_stand.location_restaurant()
-    ice_cream_stand.add_ice_cream()
-    ice_cream_stand.remove_ice_cream()
-task_1()
+    ice_cream_stand.add_flavor("Вишневое")
+    ice_cream_stand.remove_flavor("Шоколадное")
+    ice_cream_stand.time_cafe()
+    ice_cream_stand.in_cafe("Ванильное")
+    ice_cream_stand.ice_flavor()
+    ice_cream_stand.sort_ice()
 
+task_1()
